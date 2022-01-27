@@ -4,12 +4,43 @@ import numpy as np
 
 independent = input("What is your independent variable?\nindependent(unit):  ")
 dependent = input("What is your dependent variable?\ndependent(unit): ")
-intervals = [int(x) for x in input(f"\nWhich {independent} are you measuring? \nPlease seperate your answers with commas.: ").split(', ')]
+intervals = [int(x) for x in input(f"\nWhich {independent} values are you measuring? \nPlease seperate your answers with commas.: ").split(', ')]
+
+try:
+    intervals[0]
+except IndexError:
+    raise IndexError(f"PLease enter at least 5 {independent} values") from None
+
 results1 = [int(x) for x in input(f"What are the results of {intervals[0]}: ").split(', ')]
+
+try:
+    intervals[1]
+except IndexError:
+    raise IndexError(f"PLease enter at least 5 {independent} values") from None
+
 results2 = [int(x) for x in input(f"What are the results of {intervals[1]}: ").split(', ')]
+
+try:
+    intervals[2]
+except IndexError:
+    raise IndexError(f"PLease enter at least 5 {independent} values") from None
+
 results3 = [int(x) for x in input(f"What are the results of {intervals[2]}: ").split(', ')]
+
+try:
+    intervals[3]
+except IndexError:
+    raise IndexError(f"PLease enter at least 5 {independent} values") from None
+
 results4 = [int(x) for x in input(f"What are the results of {intervals[3]}: ").split(', ')]
+
+try:
+    intervals[4]
+except IndexError:
+    raise IndexError(f"PLease enter at least 5 {independent} values") from None
+
 results5 = [int(x) for x in input(f"What are the results of {intervals[4]}: ").split(', ')]
+
 # processing data
 def average(a):
     return mean(a)

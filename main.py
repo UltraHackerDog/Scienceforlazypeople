@@ -4,11 +4,11 @@ import numpy as np
 
 independent = input("What is your independent variable?\nindependent(unit):  ")
 dependent = input("What is your dependent variable?\ndependent(unit): ")
-intervals = [int(x) for x in input(f"\nWhich {independent} values are you measuring? \nPlease seperate your answers with commas.: ").split(', ')]
+intervals = [int(x) for x in input(f"\nWhich {independent} values are you measuring? \nPlease seperate your answers with commas.: ").split(',')]
 
 results = []
 for interval in intervals:
-    results.append([int(x) for x in input(f"What are the results of {intervals[0]}: ").split(', ')])
+    results.append([int(x) for x in input(f"What are the results of {interval}: ").split(',')])
 
 # processing data
 def average(a):

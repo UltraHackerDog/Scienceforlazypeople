@@ -27,8 +27,8 @@ for result in results:
 
 # graphing
 
-y = np.array(intervals)
-x = np.array([mean(result) for result in results])
+y = np.array([mean(result) for result in results])
+x = np.array(intervals)
 xerrorbars = [valrange(result) / 2 for result in results]
 
 def give_me_a_straight_line(x,y):

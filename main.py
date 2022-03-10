@@ -11,9 +11,6 @@ for interval in intervals:
     results.append([int(x) for x in input(f"What are the results of {interval}: ").split(',')])
 
 # processing data
-def average(a):
-    return mean(a)
-
 def valrange(list):
     list.sort()
     min = list[0]
@@ -22,7 +19,7 @@ def valrange(list):
 
 
 for result in results:
-    print(f"The average of {result} is {average(result)} and the range is {valrange(result)}")
+    print(f"The average of {result} is {mean(result)} and the range is {valrange(result)}")
     print("-" * 50)
 
 # graphing
